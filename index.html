@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>sOUndboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: magenta;
+        font-family: 'Handlee', cursive;
+        padding: 1rem
+      }
+      button {
+        background: white;
+        border: 0;
+        border-radius: 0.5rem;
+        color: magenta;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1.5rem;
+        line-height: 1;
+        opacity: 0.8;
+        padding: 1rem;
+        width: 100%
+      }
+      button + button {
+        margin-top: 0.5rem;
+      }
+      button:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button">
+      Ou
+      <audio src="ou1.m4a" preload="auto"></audio>
+    </button>
+    <button type="button">
+      Ouuuuuuu
+      <audio src="ou2.m4a" preload="auto"></audio>
+    </button>
+    <button type="button">
+      Ou ou ou ou
+      <audio src="ou3.m4a" preload="auto"></audio>
+    </button>
+    <button type="button">
+      High Ou ou ou
+      <audio src="ou4.m4a" preload="auto"></audio>
+    </button>
+    <button type="button">
+      Angry Ou
+      <audio src="ou5.m4a" preload="auto"></audio>
+    </button>
+
+    <script>
+      document.querySelectorAll('button').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+          event.currentTarget.lastElementChild.play();
+        });
+      });
+    </script>
+  </body>
+</html>
